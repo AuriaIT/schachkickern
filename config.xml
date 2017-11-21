@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.auria-it.schachkickern"
+    versionCode = "1"
+    version     = "0.0.1" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Schach:Kickern</name>
+
+  <description>
+      Schachkickern vereint zwei Sportarten miteinander. Ähnlich wie das Schachboxen, wird beim Schachkickern abwechselnd Schach gespielt und gekickert. Diese App hilft bei der Durchführung einer Partie.
+  </description>
+
+  <author href="http://www.schachkickern.de" email="info@schachkickern.de">
+      AURIA IT
+  </author>
+
+</widget>
