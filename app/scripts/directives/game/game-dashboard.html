@@ -1,0 +1,65 @@
+<div ng-controller="gameDashboardCtrl">
+
+    <div ng-if="game.activeGame === 'Schach'">
+
+        <h3>Schach: 3 Minuten Gesamtbedenkzeit</h3>
+
+        <div>Gesamtzeit: {{game.TotalTime.Minutes}}:{{game.TotalTime.Seconds}}</div>
+        <div class="countdown-wrapper countdown" ng-class="{'cnt-active': activePlayer == 'A'}" style="float: left;">
+            <div class="labels">{{game.PlayerA}}</div>
+            <div class="tiles" id='tiles'>
+                <span>{{game.TimePlayerA.Minutes}}</span><span>{{game.TimePlayerA.Seconds}}</span>
+            </div>
+            <div class="labels">
+                <li>Min.</li>
+                <li>Sek.</li>
+            </div>
+
+        </div>
+
+        <div class="countdown-wrapper countdown" ng-class="{'cnt-active': activePlayer == 'B'}" style="float: left; padding-left:44px">
+            <div class="labels">{{game.PlayerB}}</div>
+            <div class="tiles" id='tiles2'><span>{{game.TimePlayerB.Minutes}}</span><span>{{game.TimePlayerB.Seconds}}</span></div>
+            <div class="labels">
+                <li>Min.</li>
+                <li>Sek.</li>
+            </div>
+
+        </div>
+
+        <div style="clear: both;"></div>
+        <div><button class="btn btn-info timebtn" ng-click="changeActivePlayer();">TIME</button></div>
+
+    </div>
+
+    <div ng-if="game.activeGame !== 'Schach'">
+
+        <h3>Kickern : 3 Torelimit</h3>
+        <div>
+      
+            <div class="btn-group">
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'1'">1</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'2'">2</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'3'">3</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'4'">4</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'5'">5</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'6'">6</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'7'">7</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsA, game.GoalsB)" ng-model="game.GoalsA" btn-radio="'8'">8</label>
+            </div>
+           
+            <div class="btn-group">
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'1'">1</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'2'">2</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'3'">3</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'4'">4</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'5'">5</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'6'">6</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'7'">7</label>
+                <label class="btn btn-primary" ng-click="updateGoals(game.GoalsB, game.GoalsA)" ng-model="game.GoalsB" btn-radio="'8'">8</label>
+            </div>
+
+        </div>
+        <button class="btn btn-primary" ng-click="finishKicker();">Nächste Runde</button>
+    </div>
+</div>

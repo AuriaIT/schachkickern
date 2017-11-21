@@ -1,0 +1,86 @@
+.countdown-wrapper {
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #000;
+    position: relative;
+}
+
+.countdown {
+    margin: auto;
+    padding: 24px 0;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+    .countdown .tiles {
+        position: relative;
+        z-index: 1;
+    }
+
+        .countdown .tiles > span {
+            width: 32px;
+            max-width: 32px;
+            font: bold 28px 'Droid Sans', Arial, sans-serif;
+            text-align: center;
+            color: #111;
+            background-color: #ddd;
+            background-image: -webkit-linear-gradient(top, #bbb, #eee);
+            background-image: -moz-linear-gradient(top, #bbb, #eee);
+            background-image: -ms-linear-gradient(top, #bbb, #eee);
+            background-image: -o-linear-gradient(top, #bbb, #eee);
+            border-top: 1px solid #fff;
+            border-radius: 3px;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+            margin: 0 7px;
+            padding: 0;
+            display: inline-block;
+            position: relative;
+        }
+
+            .cnt-active .tiles > span {
+                color: red;
+            }
+
+    .countdown .labels {
+        width: 100%;
+        height: 25px;
+        position: relative;
+        bottom: 0px;
+        font: bold 14px 'Droid Sans', Arial, sans-serif;
+    }
+
+        .countdown .labels li {
+            width: 46px;
+            font: bold 12px 'Droid Sans', Arial, sans-serif;
+            color: #000;
+            text-align: center;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+.timebtn {
+    height: 100px; 
+    width: 250px; 
+    font-size: 22pt;
+}
+
+@media (min-width: 768px) {
+    .countdown .tiles > span {
+        width: 62px;
+        max-width: 62px;
+        padding: 12px 0;
+    }
+
+    .countdown .labels li {
+        width: 76px;
+    }
+
+    .timebtn {
+        height: 100px;
+        width: 350px;
+        font-size: 22pt;
+    }
+}
