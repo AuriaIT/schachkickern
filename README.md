@@ -34,7 +34,7 @@ $ npm run dist
 ```
 ## Roadmap
 
-- Add sample AJAX calls and make the directives more modular
+- Make the app more modular
 
 ### Automation tools
 
